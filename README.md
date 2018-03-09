@@ -1,4 +1,4 @@
-# Rhacker
+# Calculate Mean Median and Mode for given values (Level - Easy)
 
 Objective 
 

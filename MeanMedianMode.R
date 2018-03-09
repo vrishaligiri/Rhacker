@@ -12,16 +12,11 @@ data <- as.numeric(unlist(split_data))
 
 #Mode function
 fmode = function(x){ 
-  ta = table(x)
-  tam = max(ta)
-  if (all(ta == tam))
-    mod = min(x)
-  else
-    if(is.numeric(x))
-      mod = as.numeric(names(ta)[ta == tam])
-  else
-    mod = names(ta)[ta == tam]
-  return(mod)
+    xtab = table(x)
+    modes<-xtab[max(xtab)==xtab]
+    mag<-as.numeric(modes[1]) #in case mult. modes, this is safer
+    themodes<-names(modes)
+    return(themodes[1])
 }
 
 meany <- mean(data)
